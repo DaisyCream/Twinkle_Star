@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    position: relative;
+    width: 100%;
+}
+
+#startAnimation{
+
+}
+
+#startBtu{
+    position: relative;
+    width: 100px;
+    margin: auto;
+
+    text-align: center;
+    background-color: brown;
+    color: #ffffff;
+}
+
+.copyright{
+
+}
