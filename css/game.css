@@ -4,18 +4,27 @@
 }
 
 body{
-    position: relative;
+    position: absolute;
     width: 100%;
 }
+
 
 #starBoard{
     position: relative;
     width: 1000px;
-    margin: auto;
+    margin: 20% auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     border: 1px solid #000000;
+}
+
+.scoreAnimation{
+    position: absolute;
+    color: cadetblue;
+    font-weight: bold;
+    font-size: 22px;
+    -webkit-transition: top 2s, left 2s;
 }
 
 .starFrame{
