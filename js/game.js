@@ -59,8 +59,11 @@ GAMEING.showStar = function(){
 
 GAMEING.touchStar = function(target){
     target.parentNode.removeChild(target);
-    GAMEING.score++;
-    $$('score').innerHTML = GAMEING.score;
+    setTimeout(function(){
+        GAMEING.score++;
+        $$('score').innerHTML = GAMEING.score;
+    },1800);
+
 };
 
 
@@ -71,18 +74,20 @@ GAMEING.passStar = function(target){
 };
 
 
-GAMEING.createScore = function(x,y){
+GAMEING.createScore = function(x,y) {
     var score = document.createElement('div');
-    score.setAttribute('class','scoreAnimation');
+    score.setAttribute('class', 'scoreAnimation');
     score.innerHTML = '+1';
     score.style.left = x - 10 + 'px';
     score.style.top = y - 10 + 'px';
     document.body.appendChild(score);
     console.log("create true");
-    setTimeout(function(){
+    setTimeout(function () {
         GAMEING.scoreLocationChange(score);
-    },50);
-
+    }, 50);
+    setTimeout(function () {
+        score.parentNode.removeChild(score);
+    }, 1800);
 };
 
 GAMEING.scoreLocationChange = function(target){
