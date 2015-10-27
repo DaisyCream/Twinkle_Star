@@ -37,6 +37,7 @@ GAMEING.showStar = function(){
     var starTag = document.createElement('div');
     starTag.setAttribute('class','star');
     starFrame[startRandom].appendChild(starTag);
+    starTag.mouseCount = 0;//prevent touch star much times
     var scoreX = getElementLeft(starTag);
     var scoreY = getElementTop(starTag);
     console.log(scoreX);
@@ -47,6 +48,10 @@ GAMEING.showStar = function(){
     },1600);
 
     starTag.onmouseover = function(){
+        if(this.mouseCount!=0){
+            return;
+        }
+        this.mouseCount = 1;
         GAMEING.createScore(scoreX,scoreY);
         GAMEING.touchStar(starTag);
         clearTimeout(isTouch);
