@@ -11,8 +11,8 @@ body{
 
 #starBoard{
     position: relative;
-    width: 1000px;
-    margin: 20% auto;
+    width: 800px;
+    margin: 2% auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -44,7 +44,7 @@ body{
     height: 40px;
     background-color: white;
     border-radius: 40px;
-    -webkit-animation: twinkleStar 1.2s;
+    -webkit-animation: twinkleStar 1.5s;
 }
 
 

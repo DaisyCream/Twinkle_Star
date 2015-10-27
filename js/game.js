@@ -45,7 +45,7 @@ GAMEING.showStar = function(){
 
     var isTouch = setTimeout(function(){
         GAMEING.passStar(starTag);
-    },1000);
+    },1300);
 
     starTag.onmouseover = function(){
         if(this.mouseCount!=0){
@@ -63,7 +63,7 @@ GAMEING.showStar = function(){
     };
     GAMEING.everRandom = startRandom;
 
-    setTimeout(GAMEING.showStar,5000);
+    setTimeout(GAMEING.showStar,3000);
 };
 
 
