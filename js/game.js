@@ -45,13 +45,18 @@ GAMEING.showStar = function(){
 
     var isTouch = setTimeout(function(){
         GAMEING.passStar(starTag);
-    },1600);
+    },1000);
 
     starTag.onmouseover = function(){
         if(this.mouseCount!=0){
             return;
         }
         this.mouseCount = 1;
+        setTimeout(function(){
+            console.log('1');
+            starTag.removeAttribute('class');
+            starTag.setAttribute('class','afterTouchStar');
+        },50);
         GAMEING.createScore(scoreX,scoreY);
         GAMEING.touchStar(starTag);
         clearTimeout(isTouch);
@@ -63,7 +68,9 @@ GAMEING.showStar = function(){
 
 
 GAMEING.touchStar = function(target){
-    target.parentNode.removeChild(target);
+    setTimeout(function(){
+        target.parentNode.removeChild(target)
+    },800);
     setTimeout(function(){
         GAMEING.score++;
         $$('score').innerHTML = GAMEING.score;

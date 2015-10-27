@@ -44,7 +44,7 @@ body{
     height: 40px;
     background-color: white;
     border-radius: 40px;
-    -webkit-animation: twinkleStar 2s;
+    -webkit-animation: twinkleStar 1.2s;
 }
 
 
@@ -75,6 +75,36 @@ body{
         opacity: 0;
     }
 
+}
+
+.afterTouchStar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: white;
+    opacity: 0.2;
+    -webkit-animation: afterTouchStarAnimation 0.8s;
+}
+
+@keyframes afterTouchStarAnimation {
+    0%{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        opacity: 0.2;
+    }
+    8%{
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        opacity: 1;
+    }
+    100%{
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        opacity: 0;
+    }
 }
 
 #figureBoard{
