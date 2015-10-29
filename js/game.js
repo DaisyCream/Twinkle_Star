@@ -13,13 +13,14 @@ function $$(target){
 }
 
 /********************************Game Start**************************************/
-//var GAMESTART = function(){};
-//GAMESTART.startBtu = $$('startBtu');
-//
-//GAMESTART.startBtu.onclick = function(){
-//    window.location.href = 'game.html';
-//    //GAMEING.showStar();
-//};
+var GAMESTART = function(){};
+GAMESTART.startBtu = $$('startBtu');
+
+GAMESTART.startBtu.onclick = function(){
+    $$('loading').style.display = 'none';
+    $$('gameShow').style.display = 'block';
+    GAMEING.showStar();
+};
 
 /********************************Gameing**************************************/
 var GAMEING = function(){};
@@ -27,6 +28,8 @@ var starFrame = document.getElementsByClassName('starFrame');
 GAMEING.score = 0;
 GAMEING.life = 3;
 GAMEING.everRandom = 0;
+GAMEING.scoreDisplayBlock = $$('score').firstChild;
+GAMEING.lifeDisplayBlock = $$('life').firstChild;
 $$('score').innerHTML = GAMEING.score;
 $$('life').innerHTML = GAMEING.life;
 GAMEING.showStar = function(){
@@ -104,7 +107,7 @@ GAMEING.createScore = function(x,y) {
 
 GAMEING.scoreLocationChange = function(target){
     target.style.top = '0px';
-    target.style.left = '0px';
+    target.style.left = '50px';
 };
 
 /********************************getElement location**************************************/
@@ -144,6 +147,8 @@ var getElementLeft = function(target){
     return left;
 };
 
+
+/********************************getElement location**************************************/
+
 window.onload = function(){
-    GAMEING.showStar();
 };
